@@ -1,0 +1,491 @@
+:root{
+    --light-white:rgb(128,128,128,.6);
+    --light-black:rgb(0,0,0,.7);
+    --light-black-1:rgb(0,0,0,0.1);
+    --light-white-193:rgb(193,193,193,.5);
+    --border: 1px solid black;
+    --light-border:1px solid rgb(0,0,0,.1);
+    --white:#fff;
+    --gray:gray;
+    --orange-red:orangered;
+    --black:rgb(0,0,0);
+    --transition: .3s linear;
+    --box-shadow:0px 0px 20px rgb(0,0,0,.5);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: var(--light-white);
+}
+header{
+    width: 70%;
+    height: auto;
+    border: var(--border);
+    margin: auto;
+    background: var(--white);
+}
+header nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+header nav h5 span{
+    color: var(--orange-red);
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li{
+    padding: 3px 0px 3px 30px;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--light-black);
+    transition: var(--transition);
+}
+header nav ul li a:hover{
+    color: var(--black);
+}
+header nav ul li a i{
+    margin-right: 3px;
+}
+header .brand_nav{
+    width: 100%;
+    height: 50px;
+    background: var(--black);
+    color: var(--white);
+}
+header .brand_nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    transition: var(--transition);
+    padding: 0px 20px;
+}
+header .brand_nav ul li{
+    position: relative;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .brand_nav ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--light-white-193);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+header .brand_nav ul li a:hover{
+    color: var(--white);
+}
+header .brand_nav ul li i{
+    margin-left: 6px;
+    transition: var(--transition);
+}
+header .brand_nav ul li:nth-last-child(1) i{
+    color: var(--orange-red);
+}
+header .brand_nav ul li img{
+    width: 60px;
+}
+header .brand_nav ul li:nth-child(2) {
+    background: var(--orange-red);
+    width: 130px;
+}
+header .brand_nav ul li:nth-child(4) {
+    width: 130px;
+}
+header .brand_nav ul li:nth-child(2):hover{
+    background: var(--orange-red);
+}
+header .brand_nav ul li:nth-child(4):hover{
+    background: var(--orange-red);
+}
+header .brand_nav ul li:nth-child(1) .select_bx{
+    position: absolute;
+    top: 100%;
+    width: 90px;
+    height: 0px;
+    background: var(--orange-red);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9999999;
+    box-shadow: var(--box-shadow);
+    overflow:hidden;
+    transition: var(--transition);
+    opacity: 0;
+}
+header .brand_nav ul li:nth-child(1) .select_bx h5{
+    padding: 5px 0px;
+}
+header .brand_nav ul li:nth-child(1) .select_bx_active{
+    height: 100;
+    opacity: 1;
+}
+header .brand_nav .li_bx{
+    width: 100%;
+    height: auto;
+    background: var(--orange-red);
+    padding: 8px 0px;
+}
+header .brand_nav .li_bx li{
+    color: var(--white);
+    font-size: 12px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+header .brand_nav .li_bx li:hover{
+    color: var(--light-black);
+}
+section{
+    width: 70%;
+    height: auto;
+    display: flex;
+    margin: 34px auto 0px auto;
+    background: var(--white);
+}
+section aside, .shoes_bx{
+    width: 82%;
+    height: auto;
+}
+section aside{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+    width: 18%;
+}
+section aside .filter_bx{
+    width: 160px;
+    height: auto;
+    background: var(--light-black-1);
+    padding: 10px;
+}
+section aside .filter_bx .filter{
+    font-size: 12px;
+}
+section aside .filter_bx .total_shoes{
+    font-size: 11px;
+    margin-top: 3px;
+}
+section aside .filter_bx .shoes_check{
+    width: 100%;
+    height: auto;
+    border-top: var(--light-border);
+    margin-top: 10px;
+}
+section aside .filter_bx .shoes_check .shoes_checked{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 8px;
+    margin: 10px 0px;
+    background: var(--black);
+    color: var(--white);
+}
+/* JavaScript Class */
+section aside .filter_bx .shoes_check .shoes_check_off{
+    background: none;
+    color: var(--black);
+}
+section aside .filter_bx .shoes_check li{
+    width: 90%;
+    font-size: 12px;
+    font-weight: 500;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+section aside .filter_bx .shoes_check li i{
+    font-size: 14px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+section aside .filter_bx .shoes_check li i:hover{
+    color: var(--orange-red);
+}
+/* JavaScript Class */
+section aside .filter_bx .shoes_check li .i_active{
+    color: var(--orange-red);
+}
+section .shoes_bx{
+    padding: 0px 30px;
+}
+section .shoes_bx nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--light-border);
+}
+section .shoes_bx nav h6 i{
+    margin: 0px 3px;
+}
+section .shoes_bx nav h6 span{
+    color: var(--gray);
+}
+section .shoes_bx section {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    margin-top: 15px;
+}
+section .shoes_bx section .title_sortby {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .shoes_bx section .title_sortby h4{
+    font-weight: 600;
+}
+section .shoes_bx section .title_sortby .select_sortby{
+    position: relative;
+}
+    
+    
+section .shoes_bx section .title_sortby .select_sortby button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 0px;
+    width: 150px;
+    border: var(--light-border);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+section .shoes_bx section .title_sortby .select_sortby button i{
+    font-size: 10px;
+    color: var(--gray);
+}
+section .shoes_bx section .title_sortby .select_sortby .sortby_opt{
+    position: absolute;
+    width: 150px;
+    height: 0px;
+    padding: 5px 10px 10px 10px;
+    background: var(--white);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    transition: var(--transition);
+    opacity: 0;
+}
+section .shoes_bx section .title_sortby .select_sortby .sortby_opt li{
+    list-style-type: none;
+    padding: 5px 0px;
+    background: var(--light-black-1);
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+section .shoes_bx section .title_sortby .select_sortby .sortby_opt li:hover{
+    background: var(--black);
+    color: var(--white);
+}
+section .shoes_bx section .title_sortby .select_sortby .sortby_opt_active{
+    height: 150px;
+    opacity: 1;
+    z-index: 9999999999999999999;
+}
+section .shoes_bx .main_shoes_bx{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section .shoes_bx .main_shoes_bx .card{
+    position: relative;
+    width: 170px;
+    height: 260px;
+    padding: 10px;
+    /* border: var(--border); */
+    margin: 5px 5px 25px 0px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+section .shoes_bx .main_shoes_bx .card:hover{
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+section .shoes_bx .main_shoes_bx .card img{
+    width: 100%;
+    height: 150px;
+}
+section .shoes_bx .main_shoes_bx .card .card_title{
+    font-size: 11px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--black);
+}
+section .shoes_bx .main_shoes_bx .card p{
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gray);
+}
+section .shoes_bx .main_shoes_bx .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+section .shoes_bx .main_shoes_bx .card .price h5{
+    font-size: 11px;
+    color: var(--black);
+}
+section .shoes_bx .main_shoes_bx .card .price h5:nth-child(2){
+    font-size: 10px;
+    color: var(--gray);
+}
+section .shoes_bx .main_shoes_bx .card .color_tag{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    border-top: var(--light-border);
+}
+section .shoes_bx .main_shoes_bx .card .color_tag h6{
+    font-size: 8.5px;
+    margin-top: 3px;
+    color: var(--gray);
+}
+section .shoes_bx .main_shoes_bx .card .color_tag h6:nth-child(2){
+    color: var(--orange-red);
+}
+section .shoes_bx .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px 30px 0px;
+}
+section .shoes_bx .pagination a{
+    width: 20%;
+    text-decoration: none;
+    border: var(--light-border);
+    padding: 8px 0px;
+    font-size: 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+section .shoes_bx .pagination a:hover{
+    color:var(--white);
+    background: var(--orange-red);
+}
+section .shoes_bx .pagination h6{
+    width: 40%;
+    text-align: center;
+    border-top: var(--light-border);
+    border-bottom: var(--light-border);
+    padding: 8px 0px;
+    color: var(--orange-red);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
